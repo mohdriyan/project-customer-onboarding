@@ -1,0 +1,21 @@
+{
+  "retrieveAssessmentResponse": [
+    {
+      "question": "What Is an Investment Objective",
+      "answer": [
+        {
+          "option": "Option1"
+        },
+        {
+          "option": "Option1"
+        },
+        {
+          "option": "Option1"
+        },
+        {
+          "option": "Option1"
+        }
+      ]
+    }
+  ]
+}

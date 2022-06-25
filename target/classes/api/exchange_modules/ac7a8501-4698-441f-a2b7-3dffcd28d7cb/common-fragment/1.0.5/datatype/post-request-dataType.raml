@@ -1,0 +1,33 @@
+#%RAML 1.0 DataType
+
+type: object 
+properties:  
+ recordAssessmentRequest:
+  required: true
+  type: object
+  properties:
+    userDetails:
+      required: true
+      type: string
+      example: "REG1001"
+    name:
+      required: true
+      type: string
+      example: "Kumar"  
+ assessmentdetails:
+  required: true
+  type: array
+  items:
+    properties:
+      question:
+        required: true
+        type: string
+        example: "What Is an Investment Objective"
+      answer:
+        required: true
+        type: string
+        example: "Option1"
+ submitionDateTime:
+      required: true
+      type: string
+      example: "01-03-2022T12"

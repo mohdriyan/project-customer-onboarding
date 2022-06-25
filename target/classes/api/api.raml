@@ -1,0 +1,116 @@
+#%RAML 1.0
+title: realtime-project-customer-on-boarding
+description: This raml is for assessment sapi API
+version: 1.0.0
+protocols:
+  - HTTPS
+  - HTTP
+traits:
+  common-headers: !include /exchange_modules/ac7a8501-4698-441f-a2b7-3dffcd28d7cb/common-fragment/1.0.5/traits/common-header.raml 
+  common-error: !include /exchange_modules/ac7a8501-4698-441f-a2b7-3dffcd28d7cb/common-fragment/1.0.5/traits/common-errors-400-404-500trait.raml
+types:
+  get-assessment-response: !include /exchange_modules/ac7a8501-4698-441f-a2b7-3dffcd28d7cb/common-fragment/1.0.5/datatype/get-assessment-responsedataType.raml
+  post-assessment-request: !include /exchange_modules/ac7a8501-4698-441f-a2b7-3dffcd28d7cb/common-fragment/1.0.5/datatype/post-request-dataType.raml
+  post-assessment-response: !include /exchange_modules/ac7a8501-4698-441f-a2b7-3dffcd28d7cb/common-fragment/1.0.5/datatype/post-201-responsedataType.raml
+/assessment:
+  get:
+    description: This API will generate report of assessment for user
+    is:
+      - common-headers
+      - common-error
+    responses:
+     200:
+      body:
+        application/json:
+          type: get-assessment-response
+          example:
+  post:
+    description: This API will submit report to salesforce system.
+    is:
+      - common-headers
+      - common-error
+    body:
+      application/json:
+          type: post-assessment-request
+          example: 
+    responses:
+      201:
+         body:
+          application/json:
+            type: post-assessment-response
+            example: 
+
+          
+         
+    
+
+      
+  
+          
+
+
+
+
+
+              
+             
+
+
+
+
+
+
+
+
+      
+
+
+
+                        
+
+
+
+
+                    
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+                                  
+              
+            
+        
+      
+
+       
+
+      
+
+   
+
+              
+
+
+
+
+                    
+                  
+                  
+                                
+
+
+
+
+       
+
+      
+      
